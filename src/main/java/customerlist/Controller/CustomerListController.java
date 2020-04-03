@@ -1,6 +1,6 @@
 package customerlist.Controller;
 import customerlist.Repository.CustomerListRepository;
-import customerlist.Customers;
+import customerlist.Model.Customers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

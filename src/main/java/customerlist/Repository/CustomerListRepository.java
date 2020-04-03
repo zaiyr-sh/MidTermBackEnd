@@ -1,7 +1,7 @@
 package customerlist.Repository;
 import java.util.List;
 
-import customerlist.Customers;
+import customerlist.Model.Customers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
