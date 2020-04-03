@@ -11,13 +11,13 @@
 <div th:unless="${#lists.isEmpty(customers)}">
     <dl th:each="customer : ${customers}">
         <dt class="customerHeadline">
-            <span th:text="${customer.firstName}">First Name</span>
-            <span th:text="${customer.lastName}">Last Name</span>
-            <span th:text="${customer.emailAddress}">Email Address</span>
-            <span th:text="${customer.jobTitle}">Job Title</span>
-            <span th:text="${customer.mobilePhone}">Mobile Phone</span>
-            <span th:text="${customer.city}">City</span>
-            <span th:text="${customer.webPage}">Web Page</span>
+            Name: <span th:text="${customer.firstName}">First Name</span>
+            Surname: <span th:text="${customer.lastName}">Last Name</span>
+            Email: <span th:text="${customer.emailAddress}">Email Address</span>
+            Job Title: <span th:text="${customer.jobTitle}">Job Title</span>
+            Mobile Phone: <span th:text="${customer.mobilePhone}">Mobile Phone</span>
+            City: <span th:text="${customer.city}">City</span>
+            Web Page: <span th:text="${customer.webPage}">Web Page</span>
         </dt>
 
     </dl>

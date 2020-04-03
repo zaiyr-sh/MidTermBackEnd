@@ -1,4 +1,6 @@
-package customerlist;
+package customerlist.Controller;
+import customerlist.Repository.CustomerListRepository;
+import customerlist.Customers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +21,8 @@ public class CustomerListController {
     }
 
     @GetMapping(value = "/customerlist")
-    public String customerList(String firstName, Model model) {
-        List<Customers> customerList = customerListRepository.findByFirstName(firstName);
+    public String customerList(  Model model) {
+        List<Customers> customerList = customerListRepository.findAll();
         if (customerList != null) {
             model.addAttribute("customers", customerList);
         }
