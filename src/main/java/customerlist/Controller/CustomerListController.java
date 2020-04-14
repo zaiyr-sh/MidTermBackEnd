@@ -38,7 +38,7 @@ public class CustomerListController {
 
     @GetMapping(value = "/")
     public String ind(){
-        return "redirect:/customerlist";
+        return "home";
     }
 
 }

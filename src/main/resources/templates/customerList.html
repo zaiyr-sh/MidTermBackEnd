@@ -5,20 +5,22 @@
     <title>Customer list</title>
     <link rel="stylesheet" th:href="@{/style.css}">
 </head>
-
+<style>
+</style>
 <body>
-<h2> Welcome message</h2>
+<h2> Welcome to Customer List!</h2>
 <div th:unless="${#lists.isEmpty(customers)}">
     <dl th:each="customer : ${customers}">
         <dt class="customerHeadline">
-            Name: <span th:text="${customer.firstName}">First Name</span>
-            Surname: <span th:text="${customer.lastName}">Last Name</span>
-            Email: <span th:text="${customer.emailAddress}">Email Address</span>
-            Job Title: <span th:text="${customer.jobTitle}">Job Title</span>
-            Mobile Phone: <span th:text="${customer.mobilePhone}">Mobile Phone</span>
-            City: <span th:text="${customer.city}">City</span>
-            Web Page: <span th:text="${customer.webPage}">Web Page</span>
+            <p><strong>Name:</strong> <span th:text="${customer.firstName}">First Name</span></p>
+            <p><strong>Surname:</strong> <span th:text="${customer.lastName}">Last Name</span></p>
+            <p><strong>Email:</strong> <span th:text="${customer.emailAddress}">Email Address</span></p>
+            <p><strong>Job Title:</strong> <span th:text="${customer.jobTitle}">Job Title</span></p>
+            <p><strong>Mobile Phone:</strong> <span th:text="${customer.mobilePhone}">Mobile Phone</span></p>
+            <p><strong>City:</strong> <span th:text="${customer.city}">City</span></p>
+            <p><strong>Web Page:</strong> <span th:text="${customer.webPage}">Web Page</span></p>
         </dt>
+        <hr>
 
     </dl>
 </div>
@@ -50,5 +52,10 @@
     <input type="submit"></input>
 </form>
 
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
 </body>
+
 </html>

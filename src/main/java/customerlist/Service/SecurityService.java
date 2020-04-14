@@ -23,7 +23,7 @@ public class SecurityService extends WebSecurityConfigurerAdapter {
     {
         auth.inMemoryAuthentication()
                 .withUser("admin")
-                .password("{noop}admin")
+                .password("{noop}password")
                 .roles("ADMIN CUSTOMERS");
     }
 

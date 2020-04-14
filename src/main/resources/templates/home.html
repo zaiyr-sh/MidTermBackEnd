@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Customer List WebApp</title>
+        <base href="/home"/>
+        <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <p>Click <a th:href="@{/customerlist}">here</a> to see Customer List and add customers</p>
+    </body>
+</html>
